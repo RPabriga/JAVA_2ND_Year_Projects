@@ -9,6 +9,10 @@ public class PABRIGA {
 
         Scanner sc = new Scanner(System.in);
 
+        boolean running = true;
+
+        while (running) {
+
         System.out.println("❤️❤️❤️--------------------------------❤️❤️❤️");
         System.out.println("      JAVA REGEX ACTIVITY");
         System.out.println("❤️❤️❤️--------------------------------❤️❤️❤️");
@@ -221,13 +225,14 @@ public class PABRIGA {
             }
 
         		} else if (choice == 4) { // it tells that the user chose is 4, the program exits the functionality
-        			System.out.println("Program exited.");
+        			System.out.println("Program exited....");
 
         		} else {
-            System.out.println("This option is not implemented yet.");
+            System.out.println("Invalid choice!!!!!! This option is not implemented yet.");
 
         }
-  
+            System.out.println();
+        }
         sc.close();
     }
 }
