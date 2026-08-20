@@ -186,49 +186,48 @@ public class PABRIGA {
 
             //It is the Pattern and Matcher for websites
                   Pattern websitePattern = Pattern.compile(websiteRegex);
-            Matcher websiteMatcher = websitePattern.matcher(text);
+                  Matcher websiteMatcher = websitePattern.matcher(text);
 
-            System.out.println();
-            System.out.println("💕💕========== TEXT ANALYZER ==========💕💕");
-            System.out.println();
+                  System.out.println();
+                  System.out.println("💕💕========== TEXT ANALYZER ==========💕💕");
+                  System.out.println();
 
-            System.out.println("Email Addresses:");
-            int count = 1;
+                  System.out.println("Email Addresses:");
+                  int count = 1;
+                  while (emailMatcher.find()) { // Finding the email from the text string
+                    System.out.println(count + ". " + emailMatcher.group());
+                    count++;
+                  }
 
-            while (emailMatcher.find()) {
-                System.out.println(count + ". " + emailMatcher.group());
-                count++;
-            }
+                        System.out.println(); // Finding the phone number from the text string
+                        System.out.println("Phone Numbers:");
+                        count = 1;
+                        while (phoneMatcher.find()) {
+                        System.out.println(count + ". " + phoneMatcher.group());
+                        count++;
+                    }
 
-            System.out.println();
-            System.out.println("Phone Numbers:");
-            count = 1;
-            while (phoneMatcher.find()) {
-                System.out.println(count + ". " + phoneMatcher.group());
-                count++;
-            }
+                        System.out.println(); // finding the number from the text string
+                        System.out.println("Numbers:");
+                        count = 1;
+                        while (numberMatcher.find()) {
+                        System.out.println(count + ". " + numberMatcher.group());
+                        count++;
+                    }
 
-            System.out.println();
-            System.out.println("Numbers:");
-            count = 1;
-            while (numberMatcher.find()) {
-                System.out.println(count + ". " + numberMatcher.group());
-                count++;
-            }
+                        System.out.println(); // finding the website url from the text string
+                        System.out.println("Website URLs:");
+                        count = 1;
+                        while (websiteMatcher.find()) {
+                        System.out.println(count + ". " + websiteMatcher.group());
+                        count++;
+                    }
 
-            System.out.println();
-            System.out.println("Website URLs:");
-            count = 1;
-            while (websiteMatcher.find()) {
-                System.out.println(count + ". " + websiteMatcher.group());
-                count++;
-            }
+        		      } else if (choice == 4) { // it tells that the user chose is 4, the program exits the functionality
+        			    System.out.println("Program exited....");
 
-        		} else if (choice == 4) { // it tells that the user chose is 4, the program exits the functionality
-        			System.out.println("Program exited....");
-
-        		} else {
-            System.out.println("Invalid choice!!!!!! This option is not implemented yet.");
+        		    } else {
+                        System.out.println("Invalid choice!!!!!! This option is not implemented yet.");
 
         }
             System.out.println();
